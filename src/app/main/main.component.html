@@ -1,8 +1,8 @@
 <div class="container-image">
     <div>
-        <img src="https://images.dog.ceo/breeds/poodle-toy/n02113624_4349.jpg" alt="Dog-image"  class="image">
+        <img [src]="imageDogUrl" alt="Dog-image"  class="image">
     </div>
     <div class="footer">
-        <button mat-raised-button color="raised">Find Dog</button>
+        <button mat-raised-button color="raised" (click)="reloadDog()">Find Dog</button>
     </div>
 </div>

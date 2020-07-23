@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GetDogService } from '../getdog.service';
 
 @Component({
   selector: 'app-main',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  public imageDogUrl="";
+
+  constructor(private getDogService:GetDogService) { }
 
   ngOnInit(): void {
+    this.reloadDog();
+  }
+
+  public reloadDog(): void{
+    this.getDogService.getRandomDog().subscribe((response: any) => {
+          this.imageDogUrl= response.message;
+    })
   }
 
 }
