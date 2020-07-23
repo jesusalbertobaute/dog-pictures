@@ -1,0 +1,23 @@
+.container-image {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.image{
+    border: 5px solid #C1D6B8;
+    box-sizing: border-box;
+}
+
+.footer {
+    position: absolute; 
+    bottom: 100px; 
+}
+
+button{
+    width: 150px;
+    background-color: #C1D6B8;
+    font-size: large;
+}
