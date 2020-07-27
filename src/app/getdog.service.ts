@@ -12,4 +12,9 @@ export class GetDogService {
   public getRandomDog(){
      return this.httpClient.get(this.API_RANDOM_DOG);
   }
+
+  public getRandomOnlyDog(raza:string){
+     let api= 'https://dog.ceo/api/breed/' + raza + '/images/random';
+     return this.httpClient.get(api);   
+  }
 }

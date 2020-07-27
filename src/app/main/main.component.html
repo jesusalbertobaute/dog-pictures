@@ -2,6 +2,12 @@
     <div>
         <img [src]="imageDogUrl" alt="Dog-image"  class="image">
     </div>
+    <div class="container-middle">
+        <label>Seleccione Perro: &nbsp;</label>
+        <select  (change)="selectedDog($event)">
+            <option *ngFor="let dog of dogOptions" [value]="dog.code">{{dog.value}}</option>
+        </select>
+    </div>
     <div class="footer">
         <button mat-raised-button color="raised" (click)="reloadDog()">Find Dog</button>
     </div>

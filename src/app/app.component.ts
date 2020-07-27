@@ -6,4 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  options= [];
+
+  constructor() {
+      this.options= [
+         {"code":"all","value":"Todos"},
+         {"code":"retriever/golden","value":"Golden"},
+         {"code":"malamute","value":"Malamute"},
+         {"code":"terrier/american","value":"Terrier"}
+      ]
+  }
+
 }
